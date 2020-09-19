@@ -2,8 +2,8 @@
 
 EFI for Dell Vostro 5471 with OpenCore bootloader
 
-![descrizione](./Screenshot/portatile.jpg)
-
+![descrizione](./Screenshot/1.jpg)
+![descrizione](./Screenshot/2.jpg)![descrizione](./Screenshot/3.jpg)
 ### Computer Spec:
 
 | Component        | Brank                              |
