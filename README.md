@@ -9,7 +9,7 @@ EFI for Dell Vostro 5471 with OpenCore bootloader
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
-| CPU              | Intel® i7 67000U (SKL-R)           |
+| CPU              | Intel® i7 67000U (SKL)             |
 | iGPU             | Intel® UHD Graphics 520            |
 | dGPU             | Nvidia 920m (disabled on macOs)    |
 | Display          | 1920x1080                          |
