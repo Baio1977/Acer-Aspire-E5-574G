@@ -1,6 +1,6 @@
 # Acer-Aspire-E5-574G
 
-EFI for Dell Vostro 5471 with OpenCore bootloader
+EFI for with OpenCore bootloader 0.6.1
 
 ![descrizione](./Screenshot/1.jpg)
 
