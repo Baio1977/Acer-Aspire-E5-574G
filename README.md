@@ -21,6 +21,10 @@ EFI for with OpenCore bootloader 0.6.1
 
 ![infocatalina](./Screenshot/0.png)
 
+### PCI List
+
+![infohack](./Screenshot/8.png)
+
 ## Peripherals
 
 ![infohack](./Screenshot/4.png)
