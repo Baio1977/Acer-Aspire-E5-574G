@@ -19,9 +19,7 @@ EFI for with OpenCore bootloader 0.6.1
 | SmBios           | MacbookPro 13,3                    |
 | BootLoader       | OpenCore                           |
 
-![infocatalina](./Screenshot/infomaccatalina.png)
-
-![infobigsur](./Screenshot/infocacbigsur.png)
+![infocatalina](./Screenshot/0.png)
 
 ## Peripherals
 
