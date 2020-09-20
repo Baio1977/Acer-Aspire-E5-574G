@@ -38,6 +38,10 @@ EFI for with OpenCore bootloader 0.6.1
 
 ![usbmap](./Screenshot/7.png)
 
+### TouchPad
+
+![usbmap](./Screenshot/9.png)
+
 ### What works and What doesn't or WIP:
 
 - [x] Intel UHD 520 iGPU eDP Output (with Backlight)
