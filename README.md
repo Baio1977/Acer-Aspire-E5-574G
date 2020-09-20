@@ -25,11 +25,11 @@ EFI for with OpenCore bootloader 0.6.1
 
 ## Peripherals
 
-![infohack](./Screenshot/hackintooldevice.png)
-![infodp2](./Screenshot/DpciScreen2.png)
-![infogpu](./Screenshot/hackintooligpu.png)
-![usbmap](./Screenshot/mapusb.png)
-![infopci](./Screenshot/PCISEZ.png)
+![infohack](./Screenshot/4.png)
+![infodp2](./Screenshot/5.png)
+![infogpu](./Screenshot/6.png)
+![usbmap](./Screenshot/7b.png)
+![infopci](./Screenshot/8.png)
 
 ### What works and What doesn't or WIP:
 
