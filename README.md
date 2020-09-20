@@ -10,14 +10,14 @@ EFI for with OpenCore bootloader 0.6.1
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
 | CPU              | Intel® i7 67000U (SKL)             |
-| iGPU             | Intel® UHD Graphics 520            |
+| iGPU             | Intel® HD Graphics 520             |
 | dGPU             | Nvidia 920m (disabled on macOs)    |
 | Display          | 1920x1080                          |
 | Audio            | Realtek ALC255                     |
 | Ram              | 16 Gb ddr3 1600 Mhz                |
 | SSD              | Kingstone A400 128gb               |
 | SmBios           | MacbookPro 13,3                    |
-| BootLoader       | OpenCore                           |
+| BootLoader       | OpenCore\Clover                           |
 
 ![infocatalina](./Screenshot/0.png)
 
