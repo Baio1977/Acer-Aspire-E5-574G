@@ -58,7 +58,9 @@ EFI for with OpenCore bootloader 0.6.1
 - Applied cosmetics DSM
 
 ### DSDT Info
-![ssdt](./Screenshot/ssdtscreen.png)
+
+- Insert Device Apple 
+- Insert Method _DSM on Device
 
 See [ioreg](./ioregmacbook.ioreg) for more clarification
 
