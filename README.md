@@ -28,7 +28,7 @@ EFI for with OpenCore bootloader 0.6.1
 ![infohack](./Screenshot/4.png)
 ![infodp2](./Screenshot/5.png)
 ![infogpu](./Screenshot/6.png)
-![usbmap](./Screenshot/7b.png)
+![usbmap](./Screenshot/7.png)
 ![infopci](./Screenshot/8.png)
 
 ### What works and What doesn't or WIP:
