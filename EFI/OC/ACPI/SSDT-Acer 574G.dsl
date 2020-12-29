@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLeIZ09c.aml, Mon Dec 28 16:53:28 2020
+ * Disassembly of iASLbGOAY4.aml, Tue Dec 29 01:50:02 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000069E (1694)
+ *     Length           0x0000066B (1643)
  *     Revision         0x02
- *     Checksum         0xCD
+ *     Checksum         0x04
  *     OEM ID           "HACK"
  *     OEM Table ID     "Baio"
  *     OEM Revision     0x00000000 (0)
@@ -32,7 +32,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
     External (GPEN, FieldUnitObj)
     External (LPD0, MethodObj)    // 1 Arguments
     External (LPD3, MethodObj)    // 1 Arguments
-    External (OSYS, IntObj)
     External (PTPS, FieldUnitObj)
     External (SB10, IntObj)
     External (SDS1, FieldUnitObj)
@@ -171,15 +170,26 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
 
                 Device (TPDX)
                 {
-                    If (_OSI ("Darwin"))
-                    {
-                        Name (OSYS, 0x07DD)
-                    }
-
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_HID, "SYN1B81")  // _HID: Hardware ID
                     Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
                     Name (_UID, One)  // _UID: Unique ID
+                    Name (SBFZ, ResourceTemplate ()
+                    {
+                        GpioInt (Level, ActiveLow, Exclusive, PullUp, 0x0000,
+                            "\\ _SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x003A
+                            }
+                    })
+                    Name (SBFX, ResourceTemplate ()
+                    {
+                        Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                        {
+                            0x0000003F,
+                        }
+                    })
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg0 == ToUUID ("3cdff6f7-4267-4555-ad05-b30a3d8938de") /* HID I2C Device */))
@@ -218,23 +228,11 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
                         Return (Zero)
                     }
 
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    Method (_STA, 0, Serialized)  // _STA: Status
                     {
-                        If ((PTPS == Zero))
+                        If (_OSI ("Darwin"))
                         {
-                            Return (Zero)
-                        }
-
-                        If ((TPVD != 0x45))
-                        {
-                            If ((OSYS >= 0x07DD))
-                            {
-                                Return (0x0F)
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
+                            Return (0x0F)
                         }
                         Else
                         {
@@ -242,22 +240,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
                         }
                     }
 
-                    Name (SBFZ, ResourceTemplate ()
-                    {
-                        GpioInt (Level, ActiveLow, Exclusive, PullUp, 0x0000,
-                            "\\ _SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
-                            )
-                            {   // Pin list
-                                0x003A
-                            }
-                    })
-                    Name (SBFX, ResourceTemplate ()
-                    {
-                        Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
-                        {
-                            0x0000003F,
-                        }
-                    })
                     Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
                     {
                         Name (SBFI, ResourceTemplate ()
