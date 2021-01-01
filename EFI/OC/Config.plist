@@ -886,16 +886,47 @@
 		<true/>
 		<key>CustomMemory</key>
 		<false/>
+		<key>DataHub</key>
+		<dict>
+			<key>ARTFrequency</key>
+			<integer>0</integer>
+			<key>BoardProduct</key>
+			<string>Mac-A5C67F76ED83108C</string>
+			<key>BoardRevision</key>
+			<data>Fw==</data>
+			<key>DevicePathsSupported</key>
+			<integer>0</integer>
+			<key>FSBFrequency</key>
+			<integer>0</integer>
+			<key>InitialTSC</key>
+			<integer>0</integer>
+			<key>PlatformName</key>
+			<string></string>
+			<key>SmcBranch</key>
+			<data>MjAxNm1iAAA=</data>
+			<key>SmcPlatform</key>
+			<data>ajgwZwAAAAA=</data>
+			<key>SmcRevision</key>
+			<data>AjgPAAAR</data>
+			<key>StartupPowerEvents</key>
+			<integer>0</integer>
+			<key>SystemProductName</key>
+			<string>MacBookPro13,3</string>
+			<key>SystemSerialNumber</key>
+			<string>C02SK7YTGTFN</string>
+			<key>SystemUUID</key>
+			<string>7675A5E9-E0BA-45D0-91BF-4A98091EA2FA</string>
+		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02604902GUHCF91M</string>
+			<string>C02642102J9HCF9CB</string>
 			<key>ProcessorType</key>
 			<integer>1793</integer>
 			<key>ROM</key>
-			<data>5VuE86JO</data>
+			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -903,9 +934,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro13,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02R54YFGTFN</string>
+			<string>C02SK7YTGTFN</string>
 			<key>SystemUUID</key>
-			<string>8B9F20B1-828F-46C4-8648-51FFF1C6BEF0</string>
+			<string>7675A5E9-E0BA-45D0-91BF-4A98091EA2FA</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -947,6 +978,8 @@
 			<integer>30</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
+			<key>SetupDelay</key>
+			<integer>0</integer>
 			<key>VolumeAmplifier</key>
 			<integer>143</integer>
 		</dict>
@@ -1048,8 +1081,6 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
-			<key>DeduplicateBootOrder</key>
-			<true/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
