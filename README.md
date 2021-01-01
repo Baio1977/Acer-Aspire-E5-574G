@@ -1,6 +1,6 @@
 # Acer-Aspire-E5-574G
 
-EFI for with OpenCore bootloader 0.6.1
+EFI for with OpenCore bootloader 0.6.4
 
 ![descrizione](./Screenshot/1.jpg)
 
