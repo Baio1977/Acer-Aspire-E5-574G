@@ -9,7 +9,7 @@ EFI for with OpenCore bootloader 0.6.4
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
-| CPU              | Intel® i7 67000U (SKL)             |
+| CPU              | Intel® i7 6700U (SKL)              |
 | iGPU             | Intel® HD Graphics 520             |
 | dGPU             | Nvidia 920m (disabled on macOs)    |
 | Display          | 1920x1080                          |
@@ -17,7 +17,7 @@ EFI for with OpenCore bootloader 0.6.4
 | Ram              | 16 Gb ddr3 1600 Mhz                |
 | SSD              | Kingstone A400 128gb               |
 | SmBios           | MacbookPro 13,3                    |
-| BootLoader       | OpenCore\Clover                           |
+| BootLoader       | OpenCore\Clover                    |
 
 ![infocatalina](./Screenshot/0.png)
 
@@ -63,12 +63,10 @@ EFI for with OpenCore bootloader 0.6.4
 ### Special Config:
 
 - Usb port mapping performed
-- Applied cosmetics DSM
 
-### DSDT Info
+### SSDT Info
 
-- Insert Device Apple 
-- Insert Method _DSM on Device
+- Insert Device Apple , Fix Dualboot , New Device Trackpad 'TPDX' created
 
 See [ioreg](./ioregmacbook.ioreg) for more clarification
 
