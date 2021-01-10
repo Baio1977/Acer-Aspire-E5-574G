@@ -231,14 +231,18 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAWGQ==</data>
 				<key>AAPL,slot-name</key>
-				<string>PCI Slot-0</string>
+				<string>Internal@0,2,0</string>
 				<key>device-id</key>
 				<data>FhkAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
+				<key>enable-lspcon-support</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con0-enable</key>
 				<data>AQAAAA==</data>
@@ -246,22 +250,28 @@
 				<data>EgAAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-con1-has-lspcon</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-pipe</key>
 				<data>EgAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-has-lspcon</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con2-pipe</key>
 				<data>EgAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel HD Graphics 520</string>
+				<string>Intel Skylake GT2 [HD Graphics 520]</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -347,6 +357,78 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
+				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>BrcmBluetoothInjector.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>BrcmFirmwareData.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmFirmwareData</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>BrcmPatchRAM3.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmPatchRAM3</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
 				<string>BrightnessKeys.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -365,42 +447,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>CodecCommander.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CodecCommander</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>NoTouchID.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NoTouchID</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>RealtekRTL8111.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -408,24 +454,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RealtekRTL8111</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>Sinetek-rtsx.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/Sinetek-rtsx</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -688,7 +716,7 @@
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Scheme</key>
 		<dict>
@@ -718,6 +746,8 @@
 			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
+			<key>PickerVariant</key>
+			<string>Auto</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -776,7 +806,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
-			<false/>
+			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>DmgLoading</key>
@@ -820,7 +850,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v igfxonln=1</string>
+				<string>-v igfxonln=1 -igfxhdmidivs</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>csr-active-config</key>
@@ -886,43 +916,12 @@
 		<true/>
 		<key>CustomMemory</key>
 		<false/>
-		<key>DataHub</key>
-		<dict>
-			<key>ARTFrequency</key>
-			<integer>0</integer>
-			<key>BoardProduct</key>
-			<string>Mac-A5C67F76ED83108C</string>
-			<key>BoardRevision</key>
-			<data>Fw==</data>
-			<key>DevicePathsSupported</key>
-			<integer>0</integer>
-			<key>FSBFrequency</key>
-			<integer>0</integer>
-			<key>InitialTSC</key>
-			<integer>0</integer>
-			<key>PlatformName</key>
-			<string></string>
-			<key>SmcBranch</key>
-			<data>MjAxNm1iAAA=</data>
-			<key>SmcPlatform</key>
-			<data>ajgwZwAAAAA=</data>
-			<key>SmcRevision</key>
-			<data>AjgPAAAR</data>
-			<key>StartupPowerEvents</key>
-			<integer>0</integer>
-			<key>SystemProductName</key>
-			<string>MacBookPro13,3</string>
-			<key>SystemSerialNumber</key>
-			<string>C02SK7YTGTFN</string>
-			<key>SystemUUID</key>
-			<string>7675A5E9-E0BA-45D0-91BF-4A98091EA2FA</string>
-		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02642102J9HCF9CB</string>
+			<string>C02608802GUHCF9CB</string>
 			<key>ProcessorType</key>
 			<integer>1793</integer>
 			<key>ROM</key>
@@ -934,9 +933,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro13,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02SK7YTGTFN</string>
+			<string>C02R9BZFGTFN</string>
 			<key>SystemUUID</key>
-			<string>7675A5E9-E0BA-45D0-91BF-4A98091EA2FA</string>
+			<string>8C77A30F-31DA-4540-8010-D458BB147942</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -958,7 +957,7 @@
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
-			<false/>
+			<true/>
 			<key>MinDate</key>
 			<integer>0</integer>
 			<key>MinVersion</key>
@@ -988,6 +987,7 @@
 		<key>Drivers</key>
 		<array>
 			<string>AudioDxe.efi</string>
+			<string>CrScreenshotDxe.efi</string>
 			<string>HfsPlus.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
