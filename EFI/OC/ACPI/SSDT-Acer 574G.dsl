@@ -5,20 +5,20 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLyO7HrP.aml, Sun Jan 10 14:40:40 2021
+ * Disassembly of iASL9I3osh.aml, Sun Jan 17 10:24:11 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000066B (1643)
+ *     Length           0x00000689 (1673)
  *     Revision         0x02
- *     Checksum         0x04
+ *     Checksum         0xE4
  *     OEM ID           "HACK"
- *     OEM Table ID     "Baio"
+ *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200925 (538970405)
  */
-DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 {
     External (_PR_.CPU0, ProcessorObj)
     External (_SB_.ACAD, DeviceObj)
@@ -32,6 +32,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
     External (GPEN, FieldUnitObj)
     External (LPD0, MethodObj)    // 1 Arguments
     External (LPD3, MethodObj)    // 1 Arguments
+    External (OSYS, IntObj)
     External (PTPS, FieldUnitObj)
     External (SB10, IntObj)
     External (SDS1, FieldUnitObj)
@@ -151,26 +152,31 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
                         Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
                     }
 
-                    Method (SSCN, 0, NotSerialized)
+                    If (_OSI ("Darwin"))
                     {
-                        Return (PKGX (SSH0, SSL0, SSD0))
+                        Method (SSCN, 0, NotSerialized)
+                        {
+                            Return (PKGX (SSH0, SSL0, SSD0))
+                        }
                     }
 
-                    Method (FMCN, 0, NotSerialized)
+                    If (_OSI ("Darwin"))
                     {
-                        Name (PKG, Package (0x03)
+                        Method (FMCN, 0, NotSerialized)
                         {
-                            0x0101, 
-                            0x012C, 
-                            0x62
-                        })
-                        Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+                            Name (PKG, Package (0x03)
+                            {
+                                0x0101, 
+                                0x012C, 
+                                0x62
+                            })
+                            Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+                        }
                     }
                 }
 
                 Device (TPDX)
                 {
-                    Name (_ADR, Zero)  // _ADR: Address
                     Name (_HID, "SYN1B81")  // _HID: Hardware ID
                     Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
                     Name (_UID, One)  // _UID: Unique ID
@@ -228,7 +234,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "Baio", 0x00000000)
                         Return (Zero)
                     }
 
-                    Method (_STA, 0, Serialized)  // _STA: Status
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
                         {
