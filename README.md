@@ -17,7 +17,7 @@ EFI for with OpenCore bootloader 0.6.4
 | Ram              | 16 Gb ddr3 1600 Mhz                |
 | SSD              | Kingstone A400 128gb               |
 | SmBios           | MacbookPro 13,3                    |
-| BootLoader       | OpenCore\Clover                    |
+| BootLoader       | OpenCore                           |
 
 ![infocatalina](./Screenshot/0.png)
 
@@ -46,17 +46,15 @@ EFI for with OpenCore bootloader 0.6.4
 
 - [x] Intel UHD 520 iGPU eDP Output (with Backlight)
 - [x] ALC255 Internal Speakers
-- [x] ALC255 Native Combojack headphones
-- [x] All USB Ports + SD reader
+- [x] All USB Ports
 - [x] SpeedStep / Sleep / Wake
 - [x] I2C Touchpad with gesture
 - [x] Brightness Key
 - [x] Realtek RTL8111 LAN
-- [x] USB Cardreader
 - [x] ACPI Battery
 - [x] NVRAM
 - [x] Windows boot from OpenCore
-- [ ] Wifi + Bluetooth (unsupported)
+- [x] Wifi + Bluetooth
 - [ ] Fingerprint (unsupported)
 - [ ] Nvidia 920m (unsupported)
 
