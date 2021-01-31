@@ -15,7 +15,7 @@ EFI for with OpenCore bootloader 0.6.4
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
-| CPU              | Intel® i7 6700U (SKL)              |
+| CPU              | Intel® i7 6500U (SKL)              |
 | iGPU             | Intel® HD Graphics 520             |
 | dGPU             | Nvidia 920m (disabled on macOs)    |
 | Display          | 1920x1080                          |
