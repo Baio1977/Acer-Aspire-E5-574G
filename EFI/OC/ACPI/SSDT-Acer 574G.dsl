@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLWnYrEe.aml, Sat Feb  6 14:18:04 2021
+ * Disassembly of iASLBDkjai.aml, Wed Feb 17 10:37:47 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000689 (1673)
+ *     Length           0x00000630 (1584)
  *     Revision         0x02
- *     Checksum         0xE4
+ *     Checksum         0x26
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -90,34 +90,29 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             }
         }
 
-        Device (ALS0)
-        {
-            Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
-            Name (_CID, "smc-als")  // _CID: Compatible ID
-            Name (_ALI, 0x012C)  // _ALI: Ambient Light Illuminance
-            Name (_ALR, Package (0x01)  // _ALR: Ambient Light Response
-            {
-                Package (0x02)
-                {
-                    0x64, 
-                    0x012C
-                }
-            })
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-        }
-
         Scope (PCI0)
         {
+            Scope (GFX0)
+            {
+                Device (PNLF)
+                {
+                    Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+                    Name (_CID, "backlight")  // _CID: Compatible ID
+                    Name (_UID, 0x10)  // _UID: Unique ID
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0B)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                }
+            }
+
             Scope (I2C0)
             {
                 Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current
@@ -260,101 +255,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
 
-            Device (SRAM)
-            {
-                Name (_ADR, 0x00140002)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
-            }
-
-            Device (MCHC)
-            {
-                Name (_ADR, Zero)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
-            }
-
-            Scope (SBUS)
-            {
-                Device (BUS0)
-                {
-                    Name (_CID, "smbus")  // _CID: Compatible ID
-                    Name (_ADR, Zero)  // _ADR: Address
-                    Device (DVL0)
-                    {
-                        Name (_ADR, 0x57)  // _ADR: Address
-                        Name (_CID, "diagsvault")  // _CID: Compatible ID
-                        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-                        {
-                            If (!Arg2)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x57                                             // W
-                                })
-                            }
-
-                            Return (Package (0x02)
-                            {
-                                "address", 
-                                0x57
-                            })
-                        }
-                    }
-
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                }
-            }
-
-            Scope (GFX0)
-            {
-                Device (PNLF)
-                {
-                    Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-                    Name (_CID, "backlight")  // _CID: Compatible ID
-                    Name (_UID, 0x10)  // _UID: Unique ID
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0B)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                }
-            }
-
             Scope (LPCB)
             {
                 Device (DMAC)
@@ -426,6 +326,80 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                     }
                 }
             }
+
+            Device (MCHC)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
+            }
+
+            Scope (SBUS)
+            {
+                Device (BUS0)
+                {
+                    Name (_CID, "smbus")  // _CID: Compatible ID
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Device (DVL0)
+                    {
+                        Name (_ADR, 0x57)  // _ADR: Address
+                        Name (_CID, "diagsvault")  // _CID: Compatible ID
+                        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                        {
+                            If (!Arg2)
+                            {
+                                Return (Buffer (One)
+                                {
+                                     0x57                                             // W
+                                })
+                            }
+
+                            Return (Package (0x02)
+                            {
+                                "address", 
+                                0x57
+                            })
+                        }
+                    }
+
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                }
+            }
+
+            Device (SRAM)
+            {
+                Name (_ADR, 0x00140002)  // _ADR: Address
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
+            }
         }
 
         Device (USBX)
@@ -466,35 +440,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
         }
-    }
-
-    Method (DTGP, 5, NotSerialized)
-    {
-        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
-        {
-            If ((Arg1 == One))
-            {
-                If ((Arg2 == Zero))
-                {
-                    Arg4 = Buffer (One)
-                        {
-                             0x03                                             // .
-                        }
-                    Return (One)
-                }
-
-                If ((Arg2 == One))
-                {
-                    Return (One)
-                }
-            }
-        }
-
-        Arg4 = Buffer (One)
-            {
-                 0x00                                             // .
-            }
-        Return (Zero)
     }
 }
 
