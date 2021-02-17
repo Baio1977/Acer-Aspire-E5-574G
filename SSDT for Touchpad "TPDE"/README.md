@@ -4,8 +4,6 @@
 
 This series of laptops uses 2 types of variations on the trackpad could be equipped with ELAN trackpad "TPDE" or Synapsy trackpad "TPD1" 
 
-![touchpad](./Screenshot/10.png)
-
 Instructions: download the latest EFI release, replace SSDT in EFI\OC\ACPI, reboot.
 If you have any problems do not hesitate to contact us
 
