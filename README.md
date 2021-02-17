@@ -46,6 +46,10 @@ EFI for with OpenCore bootloader 0.6.4
 
 ### TouchPad
 
+This series of laptops uses 2 types of variations on the trackpad could be equipped with ELAN trackpad "TPDE" or Synapsy trackpad "TPD1" 
+
+![touchpad](./Screenshot/10.png)
+
 ![usbmap](./Screenshot/9.png)
 
 ### What works and What doesn't or WIP:
