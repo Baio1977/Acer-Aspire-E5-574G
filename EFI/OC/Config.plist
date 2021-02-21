@@ -189,7 +189,7 @@
 				<key>device_type</key>
 				<string>ISA bridge</string>
 				<key>model</key>
-				<string>Sunrise Point-LP LPCB Controller</string>
+				<string>Sunrise Point-LP LPC Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
 			<dict>
@@ -198,7 +198,7 @@
 				<key>device_type</key>
 				<string>Memory controller</string>
 				<key>model</key>
-				<string>Sunrise Point-LP PPMC</string>
+				<string>Sunrise Point-LP PMC</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
@@ -218,7 +218,7 @@
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,4</string>
 				<key>device_type</key>
-				<string>SMBus controller</string>
+				<string>SMBus</string>
 				<key>model</key>
 				<string>Sunrise Point-LP SMBus</string>
 			</dict>
@@ -227,27 +227,23 @@
 				<key>AAPL,GfxYTile</key>
 				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>AAAWGQ==</data>
+				<data>AAAbGQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
 				<key>device-id</key>
-				<data>FhkAAA==</data>
+				<data>GxkAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
+				<key>enable-lspcon-support</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-alldata</key>
+				<data>AAASAAIAAACYAAAAAQUSAAAEAACHAQAAAgQSAAAEAACHAQAA</data>
 				<key>framebuffer-con0-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
@@ -257,7 +253,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel HD Graphics 520</string>
+				<string>Intel HD Graphics 530</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -858,7 +854,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v brcmfx-country=#a agdpmod=vit9696</string>
+				<string>-v brcmfx-country=#a agdpmod=vit9696 igfxfcmsfbs=0x010203 igfxonln=1</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>csr-active-config</key>
@@ -931,7 +927,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02645404CDHCF9CB</string>
+			<string>C02616802GUHCF91F</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
@@ -939,13 +935,13 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
-			<string>Upgradable</string>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>MacBookPro13,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02SNXZSGTFN</string>
+			<string>C02RL0NUGTFN</string>
 			<key>SystemUUID</key>
-			<string>ED8DFCB1-E85B-4649-91CB-3551D454A806</string>
+			<string>7521C587-98AE-465D-A3C1-A2A256C8619A</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -956,11 +952,11 @@
 			<key>FirmwareFeaturesMask</key>
 			<data>P/8f/wAAAAA=</data>
 			<key>MLB</key>
-			<string>C02645404CDHCF9CB</string>
+			<string>C02616802GUHCF91F</string>
 			<key>ROM</key>
 			<data>B9aMHF+q</data>
 			<key>SystemUUID</key>
-			<string>ED8DFCB1-E85B-4649-91CB-3551D454A806</string>
+			<string>7521C587-98AE-465D-A3C1-A2A256C8619A</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
