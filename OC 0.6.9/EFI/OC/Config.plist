@@ -55,7 +55,7 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string></string>
+				<string>Rename USTP to XSTP</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>

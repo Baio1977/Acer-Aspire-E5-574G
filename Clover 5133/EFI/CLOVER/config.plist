@@ -27,6 +27,16 @@
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename USTP to XSTP</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VVNUUAg=</data>
+					<key>Replace</key>
+					<data>WFNUUAg=</data>
+				</dict>
 			</array>
 		</dict>
 		<key>FixHeaders</key>
