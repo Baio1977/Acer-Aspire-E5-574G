@@ -5,18 +5,18 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLlGL60V.aml, Sat May  1 11:28:45 2021
+ * Disassembly of iASLORlmhM.aml, Sat May  8 16:37:44 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000638 (1592)
+ *     Length           0x00000630 (1584)
  *     Revision         0x02
- *     Checksum         0x47
+ *     Checksum         0x1F
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20200925 (538970405)
+ *     Compiler Version 0x20180427 (538444839)
  */
 DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 {
@@ -36,7 +36,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (GPEN, FieldUnitObj)
     External (LPD0, MethodObj)    // 1 Arguments
     External (LPD3, MethodObj)    // 1 Arguments
-    External (PTPS, FieldUnitObj)
     External (SB10, IntObj)
     External (SSD0, IntObj)
     External (SSH0, IntObj)
