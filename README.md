@@ -78,7 +78,7 @@ This series of laptops uses 2 types of variations on the trackpad. It could be e
 
 ### SSDT Info
 
-- Insert Device Apple , Fix Dualboot , New Device Trackpad 'TPDX' created
+- Insert Device Apple , Fix Dualboot 
 
 See [ioreg](https://github.com/Baio1977/Acer-Aspire-E5-574G/blob/master/Acer%20Aspire%20574G.ioreg) for more clarification
 
