@@ -62,7 +62,7 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>XMPDetection</key>
-		<string>Yes</string>
+		<integer>0</integer>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -192,47 +192,33 @@
 				<key>model</key>
 				<string>Sunrise Point-LP PPMC</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>device-id</key>
-				<data>cJ0AAA==</data>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<integer>29</integer>
-				<key>model</key>
-				<string>ALC HD Audio Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,4</string>
-				<key>device_type</key>
-				<string>SMBus controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP SMBus</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,GfxYTile</key>
 				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>AAAbGQ==</data>
+				<data>AAAWGQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
+				<key>complete-modeset</key>
+				<data>AQAAAA==</data>
+				<key>device-id</key>
+				<data>FhkAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
-				<key>disable-external-gpu</key>
+				<key>disable-agdc</key>
 				<data>AQAAAA==</data>
-				<key>enable-hdmi20</key>
+				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
-				<key>enable-lspcon-support</key>
+				<key>force-online</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-alldata</key>
-				<data>AAASAAIAAACYAAAAAQUSAAAEAACHAQAAAgQSAAAEAACHAQAA</data>
 				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
@@ -243,7 +229,20 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel HD Graphics 530</string>
+				<string>Intel HD Graphics 520</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>device-id</key>
+				<data>cJ0AAA==</data>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>layout-id</key>
+				<integer>71</integer>
+				<key>model</key>
+				<string>ALC HD Audio Controller</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -315,8 +314,6 @@
 		<true/>
 		<key>ProtectUefiServices</key>
 		<false/>
-		<key>ProvideConsoleGopEnable</key>
-		<true/>
 		<key>ProvideMaxSlide</key>
 		<integer>0</integer>
 		<key>RebuildAppleMemoryMap</key>
@@ -391,7 +388,7 @@
 		<key>CustomUUID</key>
 		<string>37CF3B6B-40E0-4AE5-AF7E-CEEC37FED12E</string>
 		<key>InjectKexts</key>
-		<string>Yes</string>
+		<true/>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
