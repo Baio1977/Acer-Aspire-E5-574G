@@ -86,9 +86,7 @@ See [ioreg](https://github.com/Baio1977/Acer-Aspire-E5-574G/blob/master/Acer%20A
 
 - [Apple](https://apple.com) for macOS;
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
-- [Aplelife.ru](https://applelife.ru/threads/dampy-originalnyx-makov.2943712) For ioreg and ACPI of original mac.
 - [Dortania](https://github.com/dortania)
-- [mald0n](https://github.com/MaLd0n)
 - [rehabman](https://github.com/RehabMan)
 - [daliansky](https://github.com/daliansky)
 - [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
