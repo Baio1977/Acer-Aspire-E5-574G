@@ -8,7 +8,7 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT Hack</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -55,7 +55,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename USTP to XSTP (I2C)</string>
+                    <string>Rename USTP to XSTP</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -89,9 +89,9 @@
                 <key>RebaseRegions</key>
                 <false/>
                 <key>ResetHwSig</key>
-                <false/>
-                <key>ResetLogoStatus</key>
                 <true/>
+                <key>ResetLogoStatus</key>
+                <false/>
                 <key>SyncTableIds</key>
                 <false/>
             </dict>
@@ -243,11 +243,13 @@
                 <key>PciRoot(0x0)/Pci(0x1C,0x5)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,5/0,0</string>
-                    <key>device_type</key>
-                    <string>Network controller</string>
+                    <string>WLAN</string>
+                    <key>compatible</key>
+                    <string>pci14e4,43a0</string>
                     <key>model</key>
-                    <string>BCM4360 802.11ac Wireless Network Adapter</string>
+                    <string>Dell DW1560 802.11ac Wireless</string>
+                    <key>pci-aspm-default</key>
+                    <integer>0</integer>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
                 <dict>
@@ -276,7 +278,7 @@
                     <key>hda-gfx</key>
                     <string>onboard-1</string>
                     <key>layout-id</key>
-                    <integer>71</integer>
+                    <integer>29</integer>
                     <key>model</key>
                     <string>ALC HD Audio Controller</string>
                 </dict>
@@ -285,13 +287,7 @@
                     <key>AAPL,GfxYTile</key>
                     <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>AAAWGQ==</data>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,2,0</string>
-                    <key>complete-modeset</key>
-                    <data>AQAAAA==</data>
-                    <key>device-id</key>
-                    <data>FhkAAA==</data>
+                    <data>AgAWGQ==</data>
                     <key>device_type</key>
                     <string>VGA compatible controller</string>
                     <key>disable-agdc</key>
@@ -302,12 +298,22 @@
                     <data>AQAAAA==</data>
                     <key>framebuffer-con0-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-con0-pipe</key>
+                    <data>EgAAAA==</data>
+                    <key>framebuffer-con0-type</key>
+                    <data>AgAAAA==</data>
                     <key>framebuffer-con1-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-con1-pipe</key>
+                    <data>EgAAAA==</data>
                     <key>framebuffer-con1-type</key>
                     <data>AAgAAA==</data>
                     <key>framebuffer-con2-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-con2-pipe</key>
+                    <data>EgAAAA==</data>
+                    <key>framebuffer-con2-type</key>
+                    <data>AAQAAA==</data>
                     <key>framebuffer-fbmem</key>
                     <data>AACQAA==</data>
                     <key>framebuffer-patch-enable</key>
@@ -403,24 +409,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>SMCSuperIO.kext</string>
-                    <key>Comment</key>
-                    <string>V1.2.7</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCSuperIO</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
                     <string>V1.5.5</string>
@@ -475,31 +463,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BrcmBluetoothInjector.kext</string>
+                    <string>BlueToolFixup.kext</string>
                     <key>Comment</key>
                     <string>V2.6.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string></string>
+                    <string>Contents/MacOS/BlueToolFixup</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -829,7 +799,7 @@
                 <key>FuzzyMatch</key>
                 <true/>
                 <key>KernelArch</key>
-                <string>x86_64</string>
+                <string>Auto</string>
                 <key>KernelCache</key>
                 <string>Auto</string>
             </dict>
@@ -914,7 +884,7 @@
                 <key>AllowSetDefault</key>
                 <true/>
                 <key>AllowToggleSip</key>
-                <true/>
+                <false/>
                 <key>ApECID</key>
                 <integer>0</integer>
                 <key>AuthRestart</key>
@@ -961,12 +931,10 @@
                 </dict>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
-                    <key>ForceDisplayRotationInEFI</key>
-                    <integer>0</integer>
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>-v brcmfx-country=#a keepsyms=1 debug=0x100</string>
+                    <string>-v brcmfx-country=#a keepsyms=1 igfxfcmsfbs=0x010203 agdpmod=vit9696</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -985,6 +953,7 @@
                 <key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
                 <array>
                     <string>rtc-blacklist</string>
+                    <string>opencore-version</string>
                 </array>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <array>
@@ -1035,23 +1004,23 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C02638902GUHCF9AD</string>
+                <string>C02746301CDH9W8A8</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>B9aMHF+q</data>
+                <data>VKs6S6Ll</data>
                 <key>SpoofVendor</key>
-                <true/>
+                <false/>
                 <key>SystemMemoryStatus</key>
                 <string>Upgradable</string>
                 <key>SystemProductName</key>
-                <string>MacBookPro13,3</string>
+                <string>MacBookPro13,2</string>
                 <key>SystemSerialNumber</key>
-                <string>C02SF2Z4GTFN</string>
+                <string>C02RQ01HGYFH</string>
                 <key>SystemUUID</key>
-                <string>3092C7D6-FAF1-4AE6-9815-4C739CA8383B</string>
+                <string>5044DD14-91A4-4A50-B019-8706A1952588</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1075,7 +1044,7 @@
                 <key>HideVerbose</key>
                 <true/>
                 <key>JumpstartHotPlug</key>
-                <false/>
+                <true/>
                 <key>MinDate</key>
                 <integer>0</integer>
                 <key>MinVersion</key>
@@ -1219,6 +1188,8 @@
                 <false/>
                 <key>TextRenderer</key>
                 <string>BuiltinGraphics</string>
+                <key>UIScale</key>
+                <integer>-1</integer>
                 <key>UgaPassThrough</key>
                 <false/>
             </dict>
@@ -1268,7 +1239,7 @@
                 <key>DisableSecurityPolicy</key>
                 <false/>
                 <key>EnableVectorAcceleration</key>
-                <true/>
+                <false/>
                 <key>ExitBootServicesDelay</key>
                 <integer>0</integer>
                 <key>ForceOcWriteFlash</key>
