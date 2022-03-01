@@ -4,9 +4,9 @@
 [![](https://img.shields.io/badge/Facebook-HackintoshLifeIT-informational?style=flat&logo=facebook&logoColor=white&color=3a4dc9)](https://www.facebook.com/hackintoshlife/)
 [![](https://img.shields.io/badge/Instagram-HackintoshLifeIT-informational?style=flat&logo=instagram&logoColor=white&color=8a178a)](https://www.instagram.com/hackintoshlife.it_official/)
 
-# Acer-Aspire-E5-574G
+# Acer Aspire E5-574G
 
-EFI for with OpenCore bootloader 0.7.5
+EFI for with OpenCore bootloader
 
 ![descrizione](./Screenshot/1.jpg)
 
