@@ -58,7 +58,7 @@ This series of laptops uses 2 types of variations on the trackpad. It could be e
 
 ### What works and What doesn't or WIP:
 
-- [x] Intel UHD 520 iGPU eDP Output (with Backlight)
+- [x] Intel HD520 iGPU eDP Output (with Backlight)
 - [x] ALC255 Internal Speakers
 - [x] All USB Ports
 - [x] SpeedStep / Sleep / Wake
