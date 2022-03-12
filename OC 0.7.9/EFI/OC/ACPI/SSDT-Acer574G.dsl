@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210331 (64-bit version)
- * Copyright (c) 2000 - 2021 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLNch7aq.aml, Sun Nov  7 10:53:52 2021
+ * Disassembly of iASLfYtihr.aml, Sat Mar 12 19:57:44 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000005FF (1535)
+ *     Length           0x000005F9 (1529)
  *     Revision         0x02
- *     Checksum         0x14
+ *     Checksum         0xDB
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -34,6 +34,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0.SBUS, DeviceObj)
     External (GETD, MethodObj)    // 1 Arguments
     External (GPEN, FieldUnitObj)
+    External (HPTE, IntObj)
     External (LPD0, MethodObj)    // 1 Arguments
     External (LPD3, MethodObj)    // 1 Arguments
     External (SB10, IntObj)
@@ -47,6 +48,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
         If (_OSI ("Darwin"))
         {
             GPEN = One
+            HPTE = Zero
         }
 
         Scope (_PR)
@@ -83,7 +85,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x6F, 
+                        0x18, 
                         0x03
                     })
                 }
@@ -125,7 +127,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x6F, 
+                        0x18, 
                         0x03
                     })
                 }
@@ -292,14 +294,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                             {
                                 Return (Zero)
                             }
-                        }
-                    }
-
-                    Scope (EC0)
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Name (OSYS, 0x07D6)
                         }
                     }
                 }
