@@ -20,7 +20,7 @@
 | Audio            | Realtek ALC255                     |
 | Ram              | 16 Gb ddr3 1600 Mhz                |
 | SSD              | Kingstone A400 128gb               |
-| SmBios           | MacbookPro 13,3                    |
+| SmBios           | MacBookAir8,1                      |
 | BootLoader       | OpenCore                           |
 
 ![infocatalina](./Screenshot/0.png)
