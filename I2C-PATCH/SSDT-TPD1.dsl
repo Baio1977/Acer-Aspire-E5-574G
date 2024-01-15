@@ -1,4 +1,6 @@
 /*
+ * Add Rename EFI/Clover/config.plist
+
  * Find _CRS:          5F 43 52 53
  * Replace XCRS:       58 43 52 53
  * Target Bridge TPD1: 54504431
