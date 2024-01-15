@@ -66,7 +66,7 @@ This series of laptops uses 2 types of variations on the trackpad. It could be e
 - [x] ACPI Battery
 - [x] NVRAM
 - [x] Windows boot from OpenCore
-- [x] Wifi + Bluetooth
+- [x] Wifi + Bluetooth (Intel for Sonoma)
 - [ ] Fingerprint (unsupported)
 - [ ] Nvidia 920m (unsupported)
 
